@@ -76,6 +76,17 @@ footer a {
      position: relative;
 }
 
+/*secondary-hero style*/
+.secondary-hero {
+    margin: 20px;
+    background-color: black;
+    font-size:20px;
+    color:#fce138;
+    height: 300px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
 .hero-form {
     border: 3px solid #024e76;
     background-color: #fce138;
@@ -241,6 +252,7 @@ footer a {
     background-color: #024e76;
 }
 
+<<<<<<< HEAD
 
 .contact-info-Run-Buddy {
     text-align: center;
@@ -273,4 +285,42 @@ font-size: 32px;
 }
 
 /*Contact style ends*/
+=======
+/*privacy policy title starts*/
+.page-title {
+    display: inline-block;
+    border-bottom: 4px solid;
+    padding: 0px 80px 15px 80px;
+    font-weight: normal;
+    font-size: 42px;
+    font-style: italic;
+}
+
+.secondary-content {
+    width: 80%;
+    margin: 20px 100px 20px 100px;
+    text-align: center;
+
+}
+
+.secondary-content h3{
+    font-size: 25px;
+    margin: 20px 0px 20px 0px;
+}
+
+.secondary-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 20px 0px 20px 0px;
+}
+
+.secondary-content ul {
+    margin: 15px 20px 15px 20px;
+}
+
+.secondary-content li{
+    color:#39a6b2;
+    margin: 10px 0px 10px 0px;
+}
+>>>>>>> feature/contact-form
 

@@ -155,94 +155,91 @@
 
    <!--Meet the trainers-->
 
-   <section id="your-trainers" class="trainers">
+   <section id="your-trainers">
       <div>
          <h2 class="section-title primary-border"> Meet the trainers</h2>
       </div>
 
       <!--first trainer bio-->
 
-      <article class="trainer">
-         <img src="./Images/trainer-1.jpg" alt="Arron Stephens in his workout clothes ready, to pump iron.">
-         <div class="trainer-bio text-left">
-            <h3>Arron Stephens</h3>
-            <h4>Speed / Strength</h4>
-            <p>
-               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi neque animi quo cupiditate commodi saepe
-               culpa sed
-               itaque velit maiores optio dolorem excepturi aperiam dolores, voluptatibus suscipit amet quis repellat!
-            </p>
-         </div>
-      </article>
+      <div class="trainers">
+         <article class="trainer">
+            <img src="./Images/trainer-1.jpg" alt="Arron Stephens in his workout clothes ready, to pump iron.">
+            <div class="trainer-bio">
+               <h3 class="trainer-name">Arron Stephens</h3>
+               <h4 class="trainer-role">Speed / Strength</h4>
+               <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi neque animi quo cupiditate commodi
+                  saepe
+                  culpa sed
+                  itaque velit maiores optio dolorem excepturi aperiam dolores, voluptatibus suscipit amet quis
+                  repellat!
+               </p>
+            </div>
+         </article>
+      
 
       <!--second trainer bio-->
 
-      <article class="trainer">
-         <div class="trainer-bio text-right">
-            <h3>Joanna Gill</h3>
-            <h4>Endurance</h4>
-            <p>
-               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi neque animi quo cupiditate commodi saepe
-               culpa sed
-               itaque velit maiores optio dolorem excepturi aperiam dolores, voluptatibus suscipit amet quis repellat!
-            </p>
-         </div>
-         <img src="./Images/trainer-2.jpg" alt="Joanna Gill cooling off after a workout">
-      </article>
-
+      
+         <article class="trainer">
+            <img src="./Images/trainer-2.jpg" alt="Joanna Gill cooling off after a workout">
+            <div class="trainer-bio">
+               <h3 class="trainer-name">Joanna Gill</h3>
+               <h4 class="trainer-role">Endurance</h4>
+               <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi neque animi quo cupiditate commodi
+                  saepe
+                  culpa sed
+                  itaque velit maiores optio dolorem excepturi aperiam dolores, voluptatibus suscipit amet quis
+                  repellat!
+               </p>
+            </div>
+         </article>
+      
 
       <!--third trainer bio-->
 
-      <article class="trainer">
-         <img src="./Images/trainer-3.jpg" alt="Harry smith smiling and lifting with comically small pink weights">
-         <div class="trainer-bio text-left">
-            <h3>Harry Smith</h3>
-            <h4>Strength</h4>
-            <p>
-               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi neque animi quo cupiditate commodi saepe
-               culpa sed
-               itaque velit maiores optio dolorem excepturi aperiam dolores, voluptatibus suscipit amet quis repellat!
-            </p>
-         </div>
-      </article>
+
+         <article class="trainer">
+            <img src="./Images/trainer-3.jpg" alt="Harry smith smiling and lifting with comically small pink weights">
+            <div class="trainer-bio">
+               <h3 class="trainer-name">Harry Smith</h3>
+               <h4 class="trainer-role">Strength</h4>
+               <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi neque animi quo cupiditate commodi
+                  saepe
+                  culpa sed
+                  itaque velit maiores optio dolorem excepturi aperiam dolores, voluptatibus suscipit amet quis
+                  repellat!
+               </p>
+            </div>
+         </article>
+      </div>
    </section>
 
 
 
    <!--reach out section-->
 
-   <section id="reach-out" class="contact-info">
+   <section class="reach-out">
+      <h2>Reach Out</h2>
       <div class="flex-row">
          <h2 class="section-title secondary-border">Reach Out</h2>
-      </div>
-      <div>
-         <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2808.4758630933684!2d-122.69570098530734!3d45.25839065517511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495659d68cf17f3%3A0x6b3b381f8908ba25!2s454%20S%20Fir%20St%2C%20Canby%2C%20OR%2097013!5e0!3m2!1sen!2sus!4v1658264576276!5m2!1sen!2sus"
-            referrerpolicy="no-referrer-when-downgrade" width="400" height="400" style="border; 0" allowfullscreen:""
-            loading="lazy">
-         </iframe>
       </div>
    </section>
 
    <!--Contact info-->
 
-   <div class="contact-info-Run-Buddy">
-      <h3 class="contact-info">Run Buddy</h3>
-      <h3 class="contact">Run Buddy</h3>
-      <form>
-         <label for="contact-name">Your Name</label>
-         <input type="text" id="contact-name" placeholder="Your Name">
-
-         <label for="contact-message">Message</label>
-         <textarea id="contact-message" placeholder="Message"></textarea>
-
-         <button type="submit">submit</button>
-      </form>
+   <div class="contact-info">
+      <div>
+      <h3>Run Buddy</h3>
       <p>
          Any questions or concerns before signing up?
          <br />
          Let us know and we would be happy to talk to you!
       </p>
+      
       <address>
          55 Main Street <br />
          Some Town, CA <br />
@@ -251,6 +248,26 @@
          E:<a href="mailto:info@runbuddy.io">info@runbuddy.io</a>
       </address>
    </div>
+  
+   <div class="contact-form">
+      <h3>Contact Us</h3>
+   <form>
+      <label for="contact-name">Your Name</label>
+      <input type="text" id="contact-name" placeholder="Your Name">
+
+      <label for="contact-message">Message</label>
+      <textarea id="contact-message" placeholder="Message"></textarea>
+
+      <button type="submit">submit</button>
+   </form>
+</div>
+<iframe
+   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2808.4758630933684!2d-122.69570098530734!3d45.25839065517511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495659d68cf17f3%3A0x6b3b381f8908ba25!2s454%20S%20Fir%20St%2C%20Canby%2C%20OR%2097013!5e0!3m2!1sen!2sus!4v1658264576276!5m2!1sen!2sus"
+   frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+
+
+
 
 
    <!--footer-->

@@ -4,30 +4,44 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-color: #fce138;
+    --secondary-color: #024e76;
+    --tertiary-color: #39a6b2;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    color: #39a6b2;
+    color: var(--tertiary-color);
 }
 
 header {
     padding: 20px 35px;
-    display: inline-block;
-    background-color: #39a6b2;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-image: url("images/hero-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-position: 80%;
+    z-index: 9999;
 }
 
 header h1 {
     font-weight: bold;
     font-size: 36px;
-    color: #fce138;
+    color: var(--primary-color);
     margin: 0;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 header a {
     text-decoration: none;
-    color: #fce138;
+    color: var(--primary-color);
 }
 
 header nav {
@@ -47,12 +61,20 @@ header nav ul li a {
     font-weight: lighter;
     font-size: 1.55vw;
     display: inline;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+header nav ul li a:hover {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 15px;
+    text-shadow: none;
 }
 
 footer {
     display: flex;
     justify-content: space-between;
-    background: #fce138;
+    background: var(--primary-color);
     width: 100%;
     padding: 40px 35px;
     flex-wrap: wrap;
@@ -60,7 +82,7 @@ footer {
 }
 
 footer h2 {
-    color: #024e76;
+    color: var(--secondary-color);
     font-size: 30px;
     margin: 0;
 
@@ -72,7 +94,7 @@ footer div {
 }
 
 footer a {
-    color: #024e76;
+    color: var(--secondary-color);
 }
 
 /*Hero Styles Begin*/
@@ -85,6 +107,8 @@ footer a {
      justify-content: center;
      flex-wrap: wrap;
      align-items: flex-start;
+     background-attachment: fixed;
+     background-position: 80%;
 }
 
 /*secondary-hero style*/
@@ -92,17 +116,84 @@ footer a {
     margin: 20px;
     background-color: black;
     font-size:20px;
-    color:#fce138;
+    color:var(--primary-color);
     height: 300px;
     text-align: center;
     margin-bottom: 40px;
 }
 
 .hero-form {
-    border: 3px solid #024e76;
-    background-color: #fce138;
+    border: 3px solid var(--secondary-color);
+    background-color: rgba(252, 225, 56, 0.8);
     padding: 20px;
-    color: #024e76;
+    color: var(--secondary-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+}
+
+.radio-wrapper input, .checkbox-wrapper input {
+    opacity: 0;
+}
+
+.radio-wrapper label, .checkbox-wrapper label {
+    position: relative;
+    left: 10px;
+    margin: 10px;
+    line-height: 1.6;
+}
+
+.radio-wrapper label::before, .checkbox-wrapper label::before {
+    content: "";
+    height: 20px;
+    width: 20px;
+    background: rgba(255,255,255,0.75);
+    border: 1px solid var(--secondary-color);
+    position: absolute;
+    top: -4px;
+    left: -30px;
+}
+
+.radio-wrapper label::before {
+    border-radius: 50%;
+}
+
+.radio-wrapper::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    position: absolute;
+    left: -29px;
+    top: -3px;
+    background-image: radial-gradient(circle, #39a6b2, #024e76);
+}
+
+.checkbox-wrapper label::after {
+    content: "";
+    height: 6px;
+    width: 14px;
+    border-left: 2px solid #024e76;
+    border-bottom: 2px solid #024e76;
+    position: absolute;
+    left: -26px;
+    top: 1px;
+    transform: rotate(-58deg);
+}
+
+/* .radio-wrapper input:checked, .checkbox-wrapper input:checked {
+    opacity: 1;
+} */
+
+.radio-wrapper input + label::after,
+.checkbox-wrapper input + label::after {
+    font-weight: bold;
+}
+
+
+.radio-wrapper input:checked + label::after,
+.checkbox input:checked + label::after {
+    content: "";
 }
 
 .hero-cta{
@@ -112,14 +203,13 @@ footer a {
     color: #fff;
     font-size: 18px;
     line-height: 1.2;
-    color: #fce138;
+    color: var(--primary-color);
 }
 
 .hero-cta h2{
     font-style: italic;
     font-size: 55px;
-
-
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .hero h3 {
@@ -132,13 +222,20 @@ footer a {
 }
 
 .form-input {
-    border: 1px solid #024e76;
+    border: 1px solid var(--secondary-color);
     display: block;
     padding: 7px 15px;
     font-size: 16px;
-    color:#024e76
+    color: var(--secondary-color);
+    background-color: rgba(255,255,255,0.75);
     width:100%;
     margin-bottom: 15px;
+    border-radius: 15px;
+}
+
+.form-input:focus {
+    background-color: rgba(255,255,255,1);
+    outline: none;
 }
 
 .hero-form label {
@@ -146,18 +243,23 @@ footer a {
 }
 
 .hero-form button {
-    color:#fce138;
+    color: var(--primary-color);
     background-color: #024e76;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
+    border-radius: 15px;
+}
+
+.hero-form button:hover {
+    background-color: var(--tertiary-color);
 }
 /*Hero Styles End*/
 
 /*Steps Syles Start*/
 .intro p {
     line-height: 1.7;
-    color: #39a6b2;
+    color: var(--tertiary-color);
     width: 80%;
     font-size: 20px;
     margin: 0 auto;
@@ -170,7 +272,7 @@ footer a {
 
 .section-title {
     font-size: 48px;
-    color:#024e76;
+    color:var(--tertiary-color);
     border-bottom:3px solid;
     padding-bottom: 20px;
     text-align: center;
@@ -179,16 +281,16 @@ footer a {
 }
 
 .primary-border {
-    border-color:#fce138
+    border-color: var(--primary-color);
 }
 
 .secondary-border {
-    border-color: #39a6b2
+    border-color: var(--secondary-color);
 }
 
 
 .step h3 {
-    color: #024e76;
+    color: var(--secondary-color);
     font-size: 46px;
     flex: 1 30%;
 }
@@ -198,26 +300,39 @@ footer a {
     margin: 50px auto;
     padding-bottom: 50px;
     width: 80%;
-    border-bottom: 1px solid #39a6b2;
+    border-bottom: 1px solid var(--tertiary-color);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 1px solid var(--tertiary-color);
+}
+
+.step:last-child {
+    border-bottom: none;
 }
 
 .step-info {
     flex: 2 70%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.step-img {
+    flex: 1 12%;
+    margin-right: 20px;
 }
 
 .step-text p {
-    color: #39a6b2;
+    color: var(--tertiary-color);
     font-size: 18px;
 }
 
 .step-text h4 {
     font-size: 26px;
     line-height: 1.5;
-    color: #024e76;
+    color: var(--secondary-color);
 }
 /*Steps styles end*/
 
@@ -232,8 +347,8 @@ footer a {
 
 .trainer {
     margin: 20px;
-    background: #024e76;
-    color: #fce138;
+    background: var(--secondary-color);
+    color: var(--primary-color);
     flex: 1;
 }
 
@@ -268,13 +383,13 @@ footer a {
 .reach-out {
     text-align: center;
     padding-top: 50px;
-    background: #024e76;
-    color: #fce138;
+    background: var(--secondary-color);
+    color: var(--primary-color);
     font-size: 35px;
 }
 
 .contact-info h2 {
-    color:#fce138
+    color:var(--primary-color)
 }
 
 .contact-info iframe {
@@ -283,7 +398,7 @@ footer a {
 
 .contact-info {
     text-align: center;
-    background-color: #024e76;
+    background-color: var(--secondary-color);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -299,7 +414,7 @@ footer a {
 }
 
 .contact-info h3 {
-color: #fce138;
+color: var(--primary-color);
 font-size: 32px;
 }
 
@@ -311,29 +426,41 @@ font-size: 32px;
 }
 
 .contact-form input, .contact-form textarea {
-    border: 1px solid #024e76;
+    border: 1px solid var(--secondary-color);
     display: block;
     padding: 7px 15px;
     font-size: 16px;
-    color: #024e76;
+    color: var(--secondary-color);
     width: 100%;
     margin-bottom: 15px;
     margin-top: 5px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.75);
 }
 
-.contact-form button{
+.contact-form:focus, .contact-form textarea:focus {
+    background: rgba(255,255,255,1);
+    outline: none;
+}
+
+.contact-form button {
     width: 100%;
     border: none;
-    background: #fce138;
-    color: #024e76;
+    background: var(--primary-color);
+    color: var(--secondary-color);
     text-align: center;
     padding: 15px 0;
     font-size: 16px;
+    border-radius: 15px;
+}
 
+.contact-form button:hover {
+    color: var(--primary-color);
 }
 
 .contact-info a {
-    color: #fce138;
+    color: var(--primary-color);
+    background: var(--tertiary-color);
 }
 
 /*Contact style ends*/
@@ -347,6 +474,7 @@ font-size: 32px;
     header {
         padding-bottom: 0;
         justify-content: center;
+        position: relative;
     }
 
     header h1 {
@@ -420,7 +548,7 @@ font-size: 32px;
 }
 
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
-@media screnn and (max-width: 575px) {
+@media screen and (max-width: 575px) {
     .hero-form button {
         width: 100%;
     }
